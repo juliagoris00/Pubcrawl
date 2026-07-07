@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lille Bar Crawl Bingo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="hero">
+      <p class="eyebrow">🍻 Lille zaterdag</p>
+      <h1>Bar Crawl Bingo</h1>
+      <p class="subtitle">Tik opdrachten af, scoor bingo’s en check live wie er voor staat.</p>
+      <div class="player-card">
+        <label for="playerName">Jouw naam</label>
+        <div class="name-row">
+          <input id="playerName" type="text" maxlength="24" placeholder="Bijv. Sam" autocomplete="nickname" />
+          <button id="saveNameBtn" class="secondary">Opslaan</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="status-grid">
+        <article>
+          <span id="checkedCount">0</span>
+          <small>afgestreept</small>
+        </article>
+        <article>
+          <span id="bingoCount">0</span>
+          <small>bingo’s</small>
+        </article>
+        <article>
+          <span id="rankText">–</span>
+          <small>positie</small>
+        </article>
+      </section>
+
+      <section class="actions">
+        <button id="newCardBtn">🎲 Nieuwe kaart</button>
+        <button id="shareBtn" class="secondary">📤 Deel link</button>
+      </section>
+
+      <section class="board-wrap" aria-label="Bingokaart">
+        <div id="board" class="board"></div>
+      </section>
+
+      <section id="bingoBanner" class="bingo-banner hidden">
+        <h2>🎉 BINGO!</h2>
+        <p>Maak een screenshot en claim je eeuwige roem.</p>
+      </section>
+
+      <section class="scoreboard-section">
+        <div class="section-title">
+          <h2>Live-scorebord</h2>
+          <span id="syncStatus">offline modus</span>
+        </div>
+        <ol id="scoreboard" class="scoreboard"></ol>
+        <p class="hint">Het scorebord werkt live zodra Firebase is ingesteld. Zonder Firebase werkt je eigen kaart nog steeds op je telefoon.</p>
+      </section>
+    </main>
+  </div>
+
+  <canvas id="confetti"></canvas>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
