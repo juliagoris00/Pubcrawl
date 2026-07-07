@@ -1,9 +1,0 @@
-{
-  "name": "Lille Bar Crawl Bingo",
-  "short_name": "Lille Bingo",
-  "start_url": "./index.html",
-  "display": "standalone",
-  "background_color": "#140019",
-  "theme_color": "#180025",
-  "icons": []
-}
